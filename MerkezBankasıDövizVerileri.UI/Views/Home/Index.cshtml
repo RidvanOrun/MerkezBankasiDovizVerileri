@@ -1,0 +1,25 @@
+﻿@model Entities
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-10">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Merkez Bankası Döviz Kurları - @Model.CreateDate</h4>
+                <div class="card-body">
+                    <div class="form-group float-left">
+                        <label asp-for="USD" class="control-label">USD-Amerikan DOLARI = @Model.USD TL</label> <br />
+
+                        <label asp-for="AUD" class="control-label">AUD-AVUSTRALYA DOLARI = @Model.AUD TL</label> <br />
+
+                        <label asp-for="EUR" class="control-label">EUR-EURO = @Model.EUR TL</label> <br />
+
+                        <label asp-for="GBP" class="control-label">GBP-İNGİLİZ STERLİNİ = @Model.GBP TL</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
