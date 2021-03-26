@@ -15,7 +15,10 @@ namespace MerkezBankasıDövizVerileri.Data.Entitiy
         public string AUD { get; set; }
         public string EUR { get; set; }
         public string GBP { get; set; }
-        public string CreateDate { get; set; }
+
+        private DateTime _createDate;
+        public DateTime CreateDate { get => _createDate; }
+        public string CurrencyDate { get; set; }
 
     }
 }
