@@ -67,9 +67,9 @@ Bu projede; Türkiye Cumhuriyeti Merkez Bankası tarafından açıklanan döviz 
    
         public IActionResult Index(Entities entities)
         {
-            var kurBilgileri = "http://www.tcmb.gov.tr/kurlar/today.xml";
+            var currencyInf = "http://www.tcmb.gov.tr/kurlar/today.xml";
             var xmlDoc = new XmlDocument();
-            xmlDoc.Load(kurBilgileri);
+            xmlDoc.Load(currencyInf);
             entities.CurrencyDate = Convert.ToString(xmlDoc.SelectSingleNode("//Tarih_Date").Attributes["Tarih"].Value);
             entities.USD = xmlDoc.SelectSingleNode("Tarih_Date/Currency [@CrossOrder='0']/BanknoteSelling").InnerText;
             entities.AUD = xmlDoc.SelectSingleNode("Tarih_Date/Currency [@CrossOrder='1']/BanknoteSelling").InnerText;
