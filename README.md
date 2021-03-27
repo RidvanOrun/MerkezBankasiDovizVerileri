@@ -40,14 +40,15 @@ Bu projede; Türkiye Cumhuriyeti Merkez Bankası tarafından açıklanan döviz 
       }
     
    2.2. Context Klasörü açılır.
+   
       2.2.1. ApplicationDbContext.cs classı açılır.
       
        public class ApplicationDbContext: DbContext
-    {
+        {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-
+        
         public DbSet<Entities> Entities { get; set; }
-    }
+        }
 3. "MerkezBankasiDovizVerileri.UI" adında ASP.NetCore Wep App(Model-View-Controller) açılır.
 
     NOT: "MerkezBankasiDovizVerileri.Data" katmanı referans olarak eklenir.
